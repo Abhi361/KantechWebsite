@@ -13,12 +13,3 @@ python -m http.server 8000
 # then open http://localhost:8000
 ```
 
-Deploy
-
-- Push this folder to GitHub and enable GitHub Pages from the repository Settings (use `main` branch / root).
-
-Next steps
-
-- Provide logo, brand colors, and exact copy.
-- Add real contact form backend or integrations (e.g., Formspree).
-- Improve accessibility, SEO, and images.
