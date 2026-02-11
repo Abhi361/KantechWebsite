@@ -23,65 +23,108 @@
   </header>
 
   <main>
-    <section class="hero">
-      <svg class="hero-graphic" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs>
-          <linearGradient id="lg" x1="0" x2="1">
-            <stop offset="0" stop-color="#1e8cff" stop-opacity="0.85"/>
-            <stop offset="1" stop-color="#0b5dd7" stop-opacity="0.6"/>
-          </linearGradient>
-        </defs>
-        <g fill="none" stroke="url(#lg)" stroke-width="1.6" opacity="0.7">
-          <path d="M0 400 C200 320 400 480 600 420 C800 360 1000 460 1200 380" />
-          <path d="M0 320 C220 240 420 380 620 340 C820 300 1020 360 1200 300" />
-        </g>
-        <g fill="#fff" opacity="0.9">
-          <circle cx="180" cy="180" r="3" />
-          <circle cx="420" cy="260" r="3" />
-          <circle cx="760" cy="140" r="3" />
-          <circle cx="980" cy="220" r="3" />
-        </g>
-      </svg>
-      <div class="container hero-content">
-        <h1>Trusted IT & Security Solutions for Modern Businesses</h1>
-        <p class="hero-subtitle">In today's fast-paced digital world, your business needs reliable IT infrastructure and security. KantechSystems delivers end-to-end solutions tailored to your growth.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary btn-lg" href="#contact">Let's Talk</a>
-          <a class="btn btn-secondary" href="#services">Our Services</a>
+    <section class="hero-slider">
+      <div class="hero-slides">
+        <div class="hero-slide active" style="background-image: url('Hero%20bg.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <h1 class="hero-title">KANTECH SYSTEMS</h1>
+            <p class="hero-tagline">Empowering Your Business with Reliable IT & Security Solutions</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" href="#contact">Let's Talk</a>
+              <a class="btn btn-secondary" href="#services">Our Services</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('Hero%20bg2.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <h1 class="hero-title">Trusted IT Solutions</h1>
+            <p class="hero-tagline">We deliver secure, scalable infrastructure for modern businesses</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" href="#about">Learn More</a>
+              <a class="btn btn-secondary" href="#contact">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('Intro.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <h1 class="hero-title">Your Growth, Our Mission</h1>
+            <p class="hero-tagline">Tailored cloud, network, and security solutions for every business</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary btn-lg" href="#services">Our Services</a>
+              <a class="btn btn-secondary" href="#contact">Get Started</a>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="hero-slider-nav">
+        <span class="hero-dot active" data-slide="0"></span>
+        <span class="hero-dot" data-slide="1"></span>
+        <span class="hero-dot" data-slide="2"></span>
+      </div>
+      <button class="hero-arrow hero-arrow-left" aria-label="Previous slide">&#10094;</button>
+      <button class="hero-arrow hero-arrow-right" aria-label="Next slide">&#10095;</button>
     </section>
 
     <section id="about" class="section-about">
-      <div class="container">
-        <h2>Welcome to KantechSystems</h2>
-        <p>We understand that every business is unique. Businesses are constantly evolving, expanding, and adapting to new technologies. With our proven expertise in IT infrastructure, network security, and cloud solutions, we help you simplify your business needs and move faster in the competitive world of technology.</p>
+      <div class="container about-flex">
+        <div class="about-img-wrapper">
+          <img src="Welcome.jpg" alt="Welcome Image" class="about-intro-img" />
+        </div>
+        <div class="about-intro-text">
+          <span class="section-label">About Us</span>
+          <h2>Welcome to <span>KantechSystems</span></h2>
+          <p>We understand that every business is unique. Businesses are constantly evolving, expanding, and adapting to new technologies. With our proven expertise in IT infrastructure, network security, and cloud solutions, we help you simplify your business needs and move faster in the competitive world of technology.</p>
+          <p>At KantechSystems, our team is dedicated to delivering tailored solutions that align with your specific goals and challenges. Whether you're a startup seeking scalable IT support or an established enterprise looking to optimize your operations, we offer end-to-end services designed to drive efficiency and innovation.</p>
+          <a href="#contact" class="about-cta">
+            Get In Touch
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
     <section id="services" class="section-services">
       <div class="container">
-        <h2>Our Services</h2>
-        <div class="grid">
-          <article class="service-card">
-            <div class="service-icon">🖥️</div>
+        <div class="section-header">
+          <span class="section-label">What We Offer</span>
+          <h2>Our <span>Services</span></h2>
+          <p class="section-subtitle">Comprehensive IT solutions tailored to accelerate your business growth</p>
+        </div>
+        <div class="services-grid">
+          <article id="managed-it" class="service-card">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
             <h3>Managed IT Services</h3>
             <p>Proactive monitoring, helpdesk support, network management, and infrastructure maintenance to keep your operations running 24/7.</p>
+            <a href="#contact" class="service-link">Learn More <span>&rarr;</span></a>
           </article>
-          <article class="service-card">
-            <div class="service-icon">🔒</div>
+          <article id="security" class="service-card">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </div>
             <h3>Security Solutions</h3>
             <p>Vulnerability assessments, firewall management, threat detection, incident response, and compliance management.</p>
+            <a href="#contact" class="service-link">Learn More <span>&rarr;</span></a>
           </article>
-          <article class="service-card">
-            <div class="service-icon">☁️</div>
+          <article id="cloud-backup" class="service-card">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </div>
             <h3>Cloud & Backup</h3>
             <p>Cloud migrations, data backup, disaster recovery planning, and business continuity solutions.</p>
+            <a href="#contact" class="service-link">Learn More <span>&rarr;</span></a>
           </article>
-          <article class="service-card">
-            <div class="service-icon">🔧</div>
+          <article id="it-consulting" class="service-card">
+            <div class="service-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
             <h3>IT Consulting</h3>
             <p>Strategic IT planning, technology roadmaps, digital transformation guidance, and vendor management.</p>
+            <a href="#contact" class="service-link">Learn More <span>&rarr;</span></a>
           </article>
         </div>
       </div>
@@ -89,65 +132,51 @@
 
     <section id="process" class="section-process">
       <div class="container">
-        <h2>Our Process</h2>
-        <div class="process-grid">
-          <div class="process-step">
-            <div class="step-number">1</div>
-            <h3>We Assess</h3>
-            <p>We deeply understand your current IT environment, business goals, and pain points. We evaluate your infrastructure and security posture to create a comprehensive strategy.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">2</div>
-            <h3>We Design</h3>
-            <p>We design tailored solutions that align with your business objectives, budget, and timeline. Every solution is custom-built for maximum impact and ROI.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">3</div>
-            <h3>We Implement</h3>
-            <p>We deploy solutions with minimal disruption to your operations. Our team ensures smooth integration with your existing systems and staff training.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">4</div>
-            <h3>We Support</h3>
-            <p>We provide ongoing 24/7 support, monitoring, and optimization. Your success is our success, and we're here to help you grow.</p>
-          </div>
+        <div class="section-header">
+          <span class="section-label">How We Work</span>
+          <h2>Our <span>Process</span></h2>
+          <p class="section-subtitle">A streamlined approach to delivering exceptional IT solutions</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section-why-choose">
-      <div class="container">
-        <h2>Why Choose KantechSystems</h2>
-        <div class="why-choose-grid">
-          <div class="why-choose-card">
-            <div class="why-icon">⚡</div>
-            <h3>Fast & Responsive</h3>
-            <p>We understand that downtime costs money. Our rapid response team ensures issues are resolved quickly, keeping your business running smoothly.</p>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-icon-wrapper">
+              <div class="step-number">01</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Assess</h3>
+              <p>We analyze your current IT environment, business goals, and challenges to create a comprehensive strategy.</p>
+            </div>
           </div>
-          <div class="why-choose-card">
-            <div class="why-icon">💰</div>
-            <h3>Cost-Effective Solutions</h3>
-            <p>We offer flexible, scalable pricing tailored to your budget. No hidden fees, no unnecessary bloat—just what you need to succeed.</p>
+          <div class="process-step">
+            <div class="step-icon-wrapper">
+              <div class="step-number">02</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Design</h3>
+              <p>We craft tailored solutions aligned with your objectives, budget, and timeline for maximum impact.</p>
+            </div>
           </div>
-          <div class="why-choose-card">
-            <div class="why-icon">🛡️</div>
-            <h3>Proactive Security</h3>
-            <p>We don't wait for problems. Continuous monitoring, threat detection, and regular security audits keep your data safe 24/7.</p>
+          <div class="process-step">
+            <div class="step-icon-wrapper">
+              <div class="step-number">03</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Implement</h3>
+              <p>We deploy solutions with minimal disruption, ensuring smooth integration and comprehensive training.</p>
+            </div>
           </div>
-          <div class="why-choose-card">
-            <div class="why-icon">🤝</div>
-            <h3>Personalized Support</h3>
-            <p>You're not a ticket number. We work as an extension of your team, understanding your unique goals and challenges.</p>
-          </div>
-          <div class="why-choose-card">
-            <div class="why-icon">📈</div>
-            <h3>Growth-Focused</h3>
-            <p>As your business scales, your IT infrastructure grows with you. We design solutions built for the future.</p>
-          </div>
-          <div class="why-choose-card">
-            <div class="why-icon">✅</div>
-            <h3>Proven Expertise</h3>
-            <p>Our team brings years of IT experience. We stay updated on the latest technologies so your business stays competitive.</p>
+          <div class="process-step">
+            <div class="step-icon-wrapper">
+              <div class="step-number">04</div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            </div>
+            <div class="step-content">
+              <h3>Support</h3>
+              <p>We provide ongoing 24/7 support, monitoring, and optimization to help your business thrive.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -155,38 +184,71 @@
 
     <section id="contact" class="section-contact">
       <div class="container">
+        <div class="section-header">
+          <span class="section-label">Contact Us</span>
+          <h2>Get In <span>Touch</span></h2>
+          <p class="section-subtitle">Ready to transform your IT? Let's start a conversation</p>
+        </div>
         <div class="contact-wrapper">
           <div class="contact-info">
-            <h2>Get In Touch</h2>
-            <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <h3>Let's Talk</h3>
+            <p>Have questions or ready to get started? Reach out and our team will respond within 24 hours.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div class="contact-text">
+                  <span>Email Us</span>
+                  <a href="mailto:hr@kantechsystems.com">hr@kantechsystems.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div class="contact-text">
+                  <span>Call Us</span>
+                  <a href="tel:+14044510409">(404) 451-0409</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div class="contact-text">
+                  <span>Visit Us</span>
+                  <p>14749 Devonshire Lane, Frisco, TX 75035</p>
+                </div>
+              </div>
+            </div>
           </div>
           <form id="contactForm" class="contact-form">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="john@company.com" required>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="your@email.com" required>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567">
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Your company">
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="phone">Phone (Optional)</label>
-              <input id="phone" name="phone" type="tel" placeholder="(555) 123-4567">
-            </div>
-
-            <div class="form-group">
-              <label for="company">Company Name (Optional)</label>
-              <input id="company" name="company" type="text" placeholder="Your company">
-            </div>
-
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your IT needs..." required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your IT needs..." required></textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-submit">Send Message <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
           </form>
         </div>
       </div>
@@ -196,35 +258,61 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section">
-          <h4>KantechSystems</h4>
-          <p>Delivering trusted IT and security solutions for modern businesses.</p>
+        <div class="footer-section footer-brand">
+          <div class="footer-logo">
+            <img src="Logo.png" alt="KantechSystems" class="footer-logo-img">
+          </div>
+          <p>Delivering trusted IT and security solutions for modern businesses. Your technology partner for growth.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+            </a>
+          </div>
         </div>
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#process">Process</a></li>
+            <li><a href="#process">Our Process</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-section">
-          <h4>Contact</h4>
-          <p>Email: <a href="mailto:info@kantech.com">info@kantech.com</a></p>
-          <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#managed-it">Managed IT</a></li>
+            <li><a href="#security">Security Solutions</a></li>
+            <li><a href="#cloud-backup">Cloud & Backup</a></li>
+            <li><a href="#it-consulting">IT Consulting</a></li>
+          </ul>
         </div>
         <div class="footer-section">
-          <h4>Follow Us</h4>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook">Facebook</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <a href="#" aria-label="Twitter">Twitter</a>
+          <h4>Contact Us</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:hr@kantechsystems.com">hr@kantechsystems.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <a href="tel:+14044510409">(404) 451-0409</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Frisco, TX 75035</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> KantechSystems — All rights reserved.</p>
+        <p>&copy; <span id="year"></span> KantechSystems. All rights reserved.</p>
       </div>
     </div>
   </footer>
