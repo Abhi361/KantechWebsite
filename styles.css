@@ -3,6 +3,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Global Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Global SVG Constraints */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+.info-card svg,
+.contact-form-modern svg,
+.btn-submit-modern svg {
+  flex-shrink: 0;
+}
+
 /* Hero Logo and Title */
 .hero-logo {
   width: 180px;
@@ -1118,11 +1134,28 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-s
     min-height: auto;
     padding: 2rem 0;
   }
+  .team-banner-content {
+    padding: 2rem 1rem;
+  }
   .team-banner-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .team-banner-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  .team-banner .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .team-banner .stat-item {
+    padding: 1rem 0.5rem;
+  }
+  .team-banner .stat-number {
+    font-size: 1.8rem;
+  }
+  .team-banner .stat-label {
+    font-size: 0.65rem;
   }
 }
 
@@ -1814,14 +1847,24 @@ textarea {
 @media (max-width: 992px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
   }
 }
 @media (max-width: 576px) {
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
   .stat-number {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  .stat-item {
+    padding: 1.2rem 0.8rem;
   }
 }
 
@@ -2166,6 +2209,10 @@ input:focus, textarea:focus {
 .info-icon {
   width: 45px;
   height: 45px;
+  min-width: 45px;
+  min-height: 45px;
+  max-width: 45px;
+  max-height: 45px;
   background: linear-gradient(135deg, #00d4ff 0%, var(--accent) 100%);
   border-radius: 10px;
   display: flex;
@@ -2176,6 +2223,10 @@ input:focus, textarea:focus {
 .info-icon svg {
   width: 22px;
   height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  max-width: 22px;
+  max-height: 22px;
   color: #fff;
 }
 .info-text {
@@ -2253,6 +2304,7 @@ input:focus, textarea:focus {
   font-size: 1rem;
   transition: all 0.3s ease;
   background: #fff;
+  box-sizing: border-box;
 }
 .contact-form-modern input:focus,
 .contact-form-modern textarea:focus {
@@ -2285,6 +2337,10 @@ input:focus, textarea:focus {
 .btn-submit-modern svg {
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 20px;
+  max-height: 20px;
   transition: transform 0.3s ease;
 }
 .btn-submit-modern::before {
@@ -2340,5 +2396,32 @@ input:focus, textarea:focus {
   }
   .form-header h3 {
     font-size: 1.5rem;
+  }
+  .info-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .info-icon svg {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+  }
+  .info-card {
+    padding: 0.8rem 1rem;
+  }
+  .contact-info-cards {
+    gap: 0.75rem;
+  }
+  .btn-submit-modern {
+    width: 100%;
+  }
+  .btn-submit-modern svg {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
   }
 }
