@@ -53,3 +53,61 @@ form && form.addEventListener('submit', (e)=>{
     startAuto();
   }
 })();
+
+// Counter Animation
+(function() {
+  const counters = document.querySelectorAll('.stat-number');
+  let started = false;
+
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '+';
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const update = () => {
+      current += step;
+      if (current < target) {
+        el.textContent = Math.floor(current);
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target + suffix;
+      }
+    };
+    update();
+  }
+
+  function checkCounters() {
+    const statsSection = document.querySelector('.team-banner');
+    if (!statsSection || started) return;
+    
+    const rect = statsSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      started = true;
+      counters.forEach(counter => animateCounter(counter));
+    }
+  }
+
+  window.addEventListener('scroll', checkCounters);
+  window.addEventListener('load', function() {
+    setTimeout(checkCounters, 100);
+  });
+  checkCounters();
+})();
+
+// Scroll Reveal Animation
+(function() {
+  function reveal() {
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        el.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', reveal);
+  reveal();
+})();
